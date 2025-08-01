@@ -27,8 +27,18 @@ covid19_vs_happiness_index_country_ml/
 │   ├── RAW_global_confirmed_cases.csv     # Daily COVID-19 confirmed cases data
 │   └── worldwide_happiness_report.csv     # World Happiness Report data
 │
-├── experiment.ipynb                       # Main analysis notebook
-└── README.md                             # Project documentation
+├── Plots/                                 # Generated visualization images
+│   ├── growth_rate_heatmap.png           # Monthly growth rate heatmap
+│   ├── regional_analysis_dashboard.png    # Continental distribution analysis
+│   ├── statistical_analysis_suite.png    # Statistical distribution plots
+│   ├── covid_happiness_correlation.png   # Correlation analysis plots
+│   ├── top_countries_analysis.png        # Top countries bar chart
+│   ├── india_vs_us_comparison.png        # India vs US comparison
+│   ├── monthly_progression_top20.png     # Monthly progression line plot
+│   └── china_monthly_analysis.png        # China-specific analysis
+│
+├── experiment.ipynb                      # Main analysis notebook
+└── README.md                            # Project documentation
 ```
 
 ## 📈 Dataset Information
@@ -126,7 +136,7 @@ India          | 1        | 3        | 1397     | ... | 10031223 | 10031223
 This section showcases the key visualizations and insights generated from the analysis:
 
 ### 🔥 Monthly Growth Rate Heatmap
-![Growth Rate Heatmap](https://via.placeholder.com/800x500/ff6b6b/ffffff?text=Monthly+Growth+Rate+Heatmap+-+Top+10+Countries)
+![Growth Rate Heatmap](Plots/growth_rate_heatmap.png)
 
 *Month-over-month percentage growth analysis showing outbreak patterns across the top 10 most affected countries. The heatmap reveals critical growth phases during the early pandemic period.*
 
@@ -136,7 +146,7 @@ This section showcases the key visualizations and insights generated from the an
 - Color-coded visualization reveals outbreak timing
 
 ### 🌍 Regional Analysis Dashboard
-![Regional Analysis](https://via.placeholder.com/800x600/4ecdc4/ffffff?text=Continental+Distribution+Analysis)
+![Regional Analysis](Plots/regional_analysis_dashboard.png)
 
 *Comprehensive 4-panel dashboard showing:*
 - **Top Left**: Continental case distribution (pie chart)
@@ -150,7 +160,7 @@ This section showcases the key visualizations and insights generated from the an
 - Significant variation within continents
 
 ### 📈 Statistical Analysis Suite
-![Statistical Analysis](https://via.placeholder.com/800x600/45b7d1/ffffff?text=Statistical+Distribution+Analysis)
+![Statistical Analysis](Plots/statistical_analysis_suite.png)
 
 *Multi-panel statistical analysis including:*
 - **Distribution plots** with median and mean indicators
@@ -164,7 +174,7 @@ This section showcases the key visualizations and insights generated from the an
 - Exponential growth trend throughout 2020
 
 ### 💡 COVID-19 vs Happiness Correlation Analysis
-![Correlation Analysis](https://via.placeholder.com/800x600/f7b731/ffffff?text=COVID-19+vs+Happiness+Correlation)
+![Correlation Analysis](Plots/covid_happiness_correlation.png)
 
 *Advanced correlation analysis featuring:*
 - **Scatter plots** with correlation coefficients
@@ -178,7 +188,7 @@ This section showcases the key visualizations and insights generated from the an
 - Happier countries tend to have slightly lower case rates
 
 ### 📊 Top Countries Comparative Analysis
-![Top Countries](https://via.placeholder.com/800x400/a55eea/ffffff?text=Top+20+Countries+COVID-19+Cases)
+![Top Countries](Plots/top_countries_analysis.png)
 
 *Bar chart visualization showing:*
 - Top 20 countries by total confirmed cases
@@ -193,12 +203,28 @@ This section showcases the key visualizations and insights generated from the an
 5. France: ~2.5M cases
 
 ### 🔄 India vs US Monthly Comparison
-![India vs US](https://via.placeholder.com/800x500/26de81/ffffff?text=India+vs+US+Monthly+Progression)
+![India vs US](Plots/india_vs_us_comparison.png)
 
 *Side-by-side bar chart comparing monthly progression between India and US, showcasing:*
 - Different outbreak timing patterns
 - Peak month identification
 - Cumulative growth trajectories
+
+### 📈 Monthly Progression Analysis
+![Monthly Progression](Plots/monthly_progression_top20.png)
+
+*Line plot showing temporal trends for top 20 countries:*
+- Multi-country trend comparison
+- Identification of outbreak phases
+- Growth trajectory visualization
+
+### 🎯 China COVID-19 Analysis
+![China Analysis](Plots/china_monthly_analysis.png)
+
+*Dedicated analysis of China's COVID-19 progression:*
+- Monthly bar chart visualization
+- Early outbreak control patterns
+- Comparison with global trends
 
 ### 📋 Monthly Dataset Sample
 ```
@@ -208,6 +234,29 @@ India          |        1 |        3 |     1397 |    34863 |   190609 | ... |   
 Brazil         |        0 |        1 |     4256 |    71886 |   465166 | ... |    7961673
 United States  |        1 |       24 |   164610 |  1039909 |  1770384 | ... |   20346372
 ```
+
+### 🖼️ How to Generate Plot Images
+To regenerate all visualization images for the README:
+
+1. **Run the Complete Analysis**: Execute all cells in `experiment.ipynb` sequentially
+2. **Execute the Plot Saving Cell**: Run the final cell that contains the plot saving code
+3. **Check Output**: All plots will be saved as high-resolution PNG files in the `Plots/` directory
+
+```python
+# The notebook automatically saves these plots:
+# - growth_rate_heatmap.png
+# - regional_analysis_dashboard.png  
+# - top_countries_analysis.png
+# - india_vs_us_comparison.png
+# - monthly_progression_top20.png
+# - china_monthly_analysis.png
+```
+
+**Plot Specifications:**
+- **Resolution**: 300 DPI for crisp GitHub display
+- **Format**: PNG with transparency support
+- **Size**: Optimized for README viewing (800-1200px width)
+- **Quality**: Publication-ready visualizations
 
 ### 🎯 Performance Metrics
 - **Processing Speed**: 333 daily columns → 12 monthly aggregations in <2 seconds
